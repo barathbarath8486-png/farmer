@@ -1,0 +1,2 @@
+function Register() { return <div className="page"><h1>Create your account</h1><form className="form"><label>Name<input required /></label><label>Email<input type="email" required /></label><button className="button">Register</button></form></div> }
+export default Register

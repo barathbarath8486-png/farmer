@@ -1,0 +1,2 @@
+function CategoryCard({ name, description }) { return <article className="card"><h3>{name}</h3><p className="muted">{description}</p><a href="#/products">Explore category</a></article> }
+export default CategoryCard

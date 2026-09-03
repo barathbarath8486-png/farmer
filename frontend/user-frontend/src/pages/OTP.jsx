@@ -1,0 +1,2 @@
+function OTP() { return <div className="page"><h1>Verify your phone</h1><p className="muted">Enter the one-time password sent to your phone.</p><form className="form"><input aria-label="One-time password" inputMode="numeric" maxLength="6" /><button className="button">Verify</button></form></div> }
+export default OTP

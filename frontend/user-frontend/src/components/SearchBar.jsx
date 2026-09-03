@@ -1,0 +1,2 @@
+function SearchBar({ value, onChange }) { return <input aria-label="Search products" placeholder="Search produce" value={value} onChange={(event) => onChange(event.target.value)} /> }
+export default SearchBar

@@ -1,0 +1,2 @@
+function Hero() { return <section className="hero"><h1>Good food starts with good farming.</h1><p>Shop fresh produce directly from trusted local growers.</p><a className="button" href="#/products">Browse produce</a></section> }
+export default Hero

@@ -1,0 +1,2 @@
+function CartItem({ item, onRemove }) { return <article className="card"><strong>{item.name}</strong><span> × {item.quantity}</span><button onClick={() => onRemove(item.id)}>Remove</button></article> }
+export default CartItem

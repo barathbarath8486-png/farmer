@@ -1,0 +1,2 @@
+function FilterSidebar({ categories, selected, onSelect }) { return <aside className="card"><strong>Categories</strong>{categories.map((category) => <label key={category}><input type="radio" checked={selected === category} onChange={() => onSelect(category)} /> {category}</label>)}</aside> }
+export default FilterSidebar

@@ -1,0 +1,3 @@
+import { useAuth } from '../context/AuthContext'
+function Login() { const { login } = useAuth(); return <div className="page"><h1>Welcome back</h1><form className="form" onSubmit={(event) => { event.preventDefault(); login(event.target.email.value); window.location.hash = '#/' }}><label>Email<input name="email" type="email" required /></label><button className="button">Log in</button></form></div> }
+export default Login
