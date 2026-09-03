@@ -3,32 +3,29 @@ import { createContext, useContext, useState } from "react";
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(() => {
-    const savedUser = localStorage.getItem("user");
-
-    return savedUser ? JSON.parse(savedUser) : null;
+  const [admin, setAdmin] = useState(() => {
+    const savedAdmin = localStorage.getItem("admin");
+    return savedAdmin ? JSON.parse(savedAdmin) : null;
   });
 
   const [token, setToken] = useState(() => {
-    return localStorage.getItem("token");
+    return localStorage.getItem("adminToken");
   });
 
-  // Login
-  const login = (userData, jwtToken) => {
-    setUser(userData);
+  const login = (adminData, jwtToken) => {
+    setAdmin(adminData);
     setToken(jwtToken);
 
-    localStorage.setItem("user", JSON.stringify(userData));
-    localStorage.setItem("token", jwtToken);
+    localStorage.setItem("admin", JSON.stringify(adminData));
+    localStorage.setItem("adminToken", jwtToken);
   };
 
-  // Logout
   const logout = () => {
-    setUser(null);
+    setAdmin(null);
     setToken(null);
 
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
+    localStorage.removeItem("admin");
+    localStorage.removeItem("adminToken");
   };
 
   const isAuthenticated = !!token;
@@ -36,7 +33,7 @@ export function AuthProvider({ children }) {
   return (
     <AuthContext.Provider
       value={{
-        user,
+        admin,
         token,
         isAuthenticated,
         login,
@@ -48,7 +45,6 @@ export function AuthProvider({ children }) {
   );
 }
 
-// Custom hook
 export function useAuth() {
   return useContext(AuthContext);
 }

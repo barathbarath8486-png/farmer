@@ -10,7 +10,7 @@ const api = axios.create({
 // JWT token automatically send pannum
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("adminToken");
 
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -19,6 +19,21 @@ api.interceptors.request.use(
     return config;
   },
   (error) => {
+    return Promise.reject(error);
+  }
+);
+
+// Unauthorized response handle
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      localStorage.removeItem("adminToken");
+      localStorage.removeItem("admin");
+
+      window.location.href = "/login";
+    }
+
     return Promise.reject(error);
   }
 );

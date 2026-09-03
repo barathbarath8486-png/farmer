@@ -1,10 +1,50 @@
-import Home from '../pages/Home'
-import Login from '../pages/Login'
-import Products from '../pages/Products'
-import Cart from '../pages/Cart'
-import Orders from '../pages/Orders'
-import Profile from '../pages/Profile'
+import { Routes, Route, Navigate } from "react-router-dom";
 
-export function Navigate({ to }) { window.location.hash = `#${to}`; return null }
-function AppRoutes() { const path = window.location.hash.replace('#', '') || '/'; if (path === '/') return <Home />; if (path === '/products') return <Products />; if (path === '/cart') return <Cart />; if (path === '/orders') return <Orders />; if (path === '/profile') return <Profile />; if (path === '/login') return <Login />; return <Home /> }
-export default AppRoutes
+import Login from "../pages/Login";
+import OTP from "../pages/OTP";
+import Register from "../pages/Register";
+
+import Home from "../pages/Home";
+import Products from "../pages/Products";
+import ProductDetails from "../pages/ProductDetails";
+
+import Cart from "../pages/Cart";
+import Checkout from "../pages/Checkout";
+import OrderSuccess from "../pages/OrderSuccess";
+
+import Orders from "../pages/Orders";
+import OrderDetails from "../pages/OrderDetails";
+
+import Profile from "../pages/Profile";
+
+function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/otp" element={<OTP />} />
+      <Route path="/register" element={<Register />} />
+
+      <Route path="/home" element={<Home />} />
+
+      <Route path="/products" element={<Products />} />
+      <Route path="/products/:id" element={<ProductDetails />} />
+
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/order-success" element={<OrderSuccess />} />
+
+      <Route path="/orders" element={<Orders />} />
+      <Route path="/orders/:id" element={<OrderDetails />} />
+
+      <Route path="/profile" element={<Profile />} />
+
+      <Route
+        path="*"
+        element={<Navigate to="/login" replace />}
+      />
+    </Routes>
+  );
+}
+
+export default AppRoutes;
