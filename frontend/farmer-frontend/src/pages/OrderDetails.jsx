@@ -4,29 +4,25 @@ function OrderDetails() {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  // Temporary order data
   const order = {
     id: id || "ORD1001",
-    customer: "Dharshan",
+    buyer: "AgriConnect Admin",
     phone: "9876543210",
-    address: "Coimbatore, Tamil Nadu",
     product: "Fresh Tomato",
-    quantity: "10 kg",
+    quantity: "50 kg",
     price: 40,
-    amount: 400,
-    status: "Delivered",
+    amount: 2000,
+    status: "Completed",
     payment: "Paid",
     date: "02 Sep 2026",
   };
 
   return (
     <div className="order-details-page">
-
-      {/* Header */}
       <div className="order-details-header">
         <div>
           <h1>Order Details</h1>
-          <p>View complete information about this order.</p>
+          <p>View complete information about this purchase order.</p>
         </div>
 
         <button
@@ -37,10 +33,7 @@ function OrderDetails() {
         </button>
       </div>
 
-      {/* Order Card */}
       <div className="order-details-card">
-
-        {/* Order Header */}
         <div className="order-detail-top">
           <div>
             <span className="order-detail-label">Order ID</span>
@@ -57,34 +50,26 @@ function OrderDetails() {
           </span>
         </div>
 
-        {/* Customer */}
         <div className="order-detail-section">
-          <h3>Customer Information</h3>
+          <h3>Buyer Information</h3>
 
           <div className="order-detail-grid">
             <div>
-              <span>Name</span>
-              <strong>{order.customer}</strong>
+              <span>Buyer</span>
+              <strong>{order.buyer}</strong>
             </div>
 
             <div>
               <span>Phone</span>
               <strong>{order.phone}</strong>
             </div>
-
-            <div className="order-address">
-              <span>Delivery Address</span>
-              <strong>{order.address}</strong>
-            </div>
           </div>
         </div>
 
-        {/* Product */}
         <div className="order-detail-section">
-          <h3>Product Information</h3>
+          <h3>Purchase Information</h3>
 
           <div className="order-product-box">
-
             <div className="order-product-icon">
               🥬
             </div>
@@ -98,11 +83,9 @@ function OrderDetails() {
               <span>₹{order.price} / kg</span>
               <strong>₹{order.amount}</strong>
             </div>
-
           </div>
         </div>
 
-        {/* Payment */}
         <div className="order-detail-section">
           <h3>Payment Information</h3>
 
@@ -115,22 +98,21 @@ function OrderDetails() {
           </div>
 
           <div className="payment-row">
-            <span>Total Amount</span>
+            <span>Total Purchase Value</span>
+
             <strong>₹{order.amount}</strong>
           </div>
         </div>
 
-        {/* Timeline */}
         <div className="order-detail-section">
-          <h3>Order Timeline</h3>
+          <h3>Purchase Timeline</h3>
 
           <div className="order-timeline">
-
             <div className="timeline-item completed">
               <div className="timeline-dot">✓</div>
 
               <div>
-                <strong>Order Placed</strong>
+                <strong>Purchase Order Placed</strong>
                 <span>{order.date}</span>
               </div>
             </div>
@@ -140,7 +122,7 @@ function OrderDetails() {
 
               <div>
                 <strong>Order Confirmed</strong>
-                <span>Order accepted by farmer</span>
+                <span>Purchase order confirmed by farmer</span>
               </div>
             </div>
 
@@ -148,8 +130,8 @@ function OrderDetails() {
               <div className="timeline-dot">✓</div>
 
               <div>
-                <strong>Out for Delivery</strong>
-                <span>Product handed over for delivery</span>
+                <strong>Product Collected</strong>
+                <span>Products collected from farmer</span>
               </div>
             </div>
 
@@ -157,15 +139,13 @@ function OrderDetails() {
               <div className="timeline-dot">✓</div>
 
               <div>
-                <strong>Delivered</strong>
-                <span>Order successfully delivered</span>
+                <strong>Purchase Completed</strong>
+                <span>Admin purchase completed successfully</span>
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* Bottom Action */}
         <div className="order-detail-actions">
           <button
             className="order-back-btn"
@@ -174,9 +154,7 @@ function OrderDetails() {
             Back to Orders
           </button>
         </div>
-
       </div>
-
     </div>
   );
 }

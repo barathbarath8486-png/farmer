@@ -174,251 +174,7 @@ body {
     padding: 16px;
   }
 }
-/* ================================
-   LOGIN PAGE
-================================ */
 
-.login-page {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  background: #f4f7f4;
-}
-
-.login-card {
-  width: 100%;
-  max-width: 950px;
-  min-height: 560px;
-
-  display: flex;
-
-  background: #ffffff;
-  border-radius: 14px;
-  overflow: hidden;
-
-  border: 1px solid #e5e7eb;
-}
-
-
-/* Left */
-
-.login-info {
-  width: 45%;
-  padding: 50px 45px;
-  background: #eaf5eb;
-}
-
-.login-logo {
-  font-size: 42px;
-  margin-bottom: 12px;
-}
-
-.login-info h1 {
-  margin: 0;
-  font-size: 32px;
-  color: #2e7d32;
-}
-
-.login-info h2 {
-  margin: 8px 0 18px;
-  font-size: 20px;
-  color: #333;
-}
-
-.login-info > p {
-  margin: 0 0 35px;
-  line-height: 1.6;
-  color: #555;
-  font-size: 14px;
-}
-
-.login-feature {
-  display: flex;
-  gap: 14px;
-  margin-bottom: 22px;
-}
-
-.login-feature > span {
-  font-size: 25px;
-}
-
-.login-feature strong {
-  font-size: 14px;
-  color: #333;
-}
-
-.login-feature p {
-  margin: 5px 0 0;
-  font-size: 12px;
-  color: #666;
-}
-
-
-/* Right */
-
-.login-form-section {
-  width: 55%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-}
-
-.login-form-box {
-  width: 100%;
-  max-width: 390px;
-}
-
-.login-form-box h2 {
-  margin: 0;
-  font-size: 26px;
-  color: #222;
-}
-
-.login-subtitle {
-  margin: 8px 0 30px;
-  color: #777;
-  font-size: 14px;
-}
-
-
-/* Form */
-
-.login-form-group {
-  margin-bottom: 20px;
-}
-
-.login-form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-}
-
-.login-form-group input {
-  width: 100%;
-  height: 44px;
-
-  padding: 0 12px;
-
-  border: 1px solid #d5d9d5;
-  border-radius: 7px;
-
-  outline: none;
-  font-size: 14px;
-}
-
-.login-form-group input:focus {
-  border-color: #4caf50;
-}
-
-
-/* Phone */
-
-.phone-field {
-  display: flex;
-  height: 44px;
-}
-
-.phone-field span {
-  width: 55px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #f3f4f3;
-  border: 1px solid #d5d9d5;
-  border-right: none;
-
-  border-radius: 7px 0 0 7px;
-
-  font-size: 14px;
-  color: #555;
-}
-
-.phone-field input {
-  border-radius: 0 7px 7px 0;
-}
-
-
-/* Error */
-
-.login-error {
-  padding: 10px 12px;
-  margin-bottom: 18px;
-
-  border-radius: 6px;
-
-  background: #fff1f1;
-  color: #c62828;
-
-  font-size: 13px;
-}
-
-
-/* Button */
-
-.login-button {
-  width: 100%;
-  height: 45px;
-
-  border: none;
-  border-radius: 7px;
-
-  background: #2e7d32;
-  color: white;
-
-  font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-.login-button:hover {
-  background: #256b29;
-}
-
-
-/* Footer */
-
-.login-footer {
-  margin: 25px 0 0;
-  text-align: center;
-
-  font-size: 13px;
-  color: #777;
-}
-
-.login-footer span {
-  color: #2e7d32;
-  font-weight: 600;
-}
-
-
-/* Mobile */
-
-@media (max-width: 768px) {
-  .login-page {
-    padding: 15px;
-  }
-
-  .login-card {
-    max-width: 500px;
-  }
-
-  .login-info {
-    display: none;
-  }
-
-  .login-form-section {
-    width: 100%;
-    padding: 35px 25px;
-  }
-}
 /* ================================
    DASHBOARD
 ================================ */
@@ -2250,4 +2006,760 @@ body {
 
 .contact-admin-btn:hover {
   text-decoration: underline;
+}
+/* ================================
+   NEW DASHBOARD
+================================ */
+
+.dashboard-page {
+  width: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #222;
+}
+
+.dashboard-header p {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.dashboard-add-btn {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #2e7d32;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dashboard-add-btn:hover {
+  background: #256b29;
+}
+
+/* Stats */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.dashboard-stat-card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.dashboard-stat-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #777;
+  font-size: 13px;
+}
+
+.dashboard-stat-card strong {
+  display: block;
+  color: #222;
+  font-size: 24px;
+}
+
+/* Bottom Sections */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.dashboard-section-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.dashboard-section-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.dashboard-section-header p {
+  margin: 5px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.dashboard-view-all-btn {
+  border: none;
+  background: none;
+  color: #2e7d32;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Recent Orders */
+
+.dashboard-orders {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-order-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard-order-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dashboard-order-main strong {
+  color: #333;
+  font-size: 13px;
+}
+
+.dashboard-order-main span {
+  color: #555;
+  font-size: 13px;
+}
+
+.dashboard-order-main small {
+  color: #999;
+  font-size: 11px;
+}
+
+.dashboard-order-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.dashboard-order-right > strong {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Order Status */
+
+.order-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.order-status.pending {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.order-status.confirmed {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.order-status.collected {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.order-status.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Low Stock */
+
+.dashboard-low-stock {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-stock-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-stock-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard-stock-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashboard-stock-item strong {
+  color: #333;
+  font-size: 14px;
+}
+
+.dashboard-stock-item span {
+  color: #888;
+  font-size: 12px;
+}
+
+.dashboard-stock-item > strong {
+  color: #d97706;
+}
+
+.dashboard-manage-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #2e7d32;
+  border-radius: 7px;
+  background: white;
+  color: #2e7d32;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dashboard-manage-btn:hover {
+  background: #e8f5e9;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-order-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-order-right {
+    align-items: flex-start;
+  }
+}
+/* ================================
+   FARMER PROFILE
+================================ */
+
+.profile-page {
+  width: 100%;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #222;
+}
+
+.profile-header p {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.profile-edit-btn {
+  border: none;
+  border-radius: 7px;
+  padding: 11px 18px;
+  background: #2e7d32;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.profile-edit-btn:hover {
+  background: #256b29;
+}
+
+.profile-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8f5e9;
+  font-size: 32px;
+}
+
+.profile-top h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+.profile-top p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.profile-section {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-section h3 {
+  margin: 0 0 18px;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-field label {
+  color: #777;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-field strong {
+  color: #333;
+  font-size: 14px;
+}
+
+.profile-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.profile-field input:focus {
+  border-color: #2e7d32;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.profile-cancel-btn,
+.profile-save-btn {
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.profile-cancel-btn {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #555;
+}
+
+.profile-save-btn {
+  border: none;
+  background: #2e7d32;
+  color: white;
+}
+
+.profile-save-btn:hover {
+  background: #256b29;
+}
+
+.profile-security-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-security-card h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.profile-security-card p {
+  margin: 6px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.security-status {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-security-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* ================================
+   FARMER LOGIN PAGE - FIX
+================================ */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #f3f6f3;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 950px;
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* LEFT SIDE */
+
+.login-info {
+  padding: 55px 45px;
+  background: #2e7d32;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-logo {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.login-info h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.login-info h2 {
+  margin: 7px 0 15px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.login-info > p {
+  margin: 0 0 28px;
+  max-width: 400px;
+  line-height: 1.6;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.login-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.login-feature > span {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.login-feature strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.login-feature p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* RIGHT SIDE */
+
+.login-form-section {
+  padding: 55px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+.login-form-header {
+  margin-bottom: 28px;
+}
+
+.login-form-header h2 {
+  margin: 0;
+  color: #222;
+  font-size: 25px;
+}
+
+.login-form-header p {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* FORM */
+
+.login-form-section form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  height: 45px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  border: 1px solid #d5d9d5;
+  border-radius: 7px;
+  outline: none;
+  background: white;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+/* ERROR */
+
+.login-error {
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #ffebee;
+  color: #c62828;
+  font-size: 12px;
+}
+
+/* LOGIN BUTTON */
+
+.login-submit-btn {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 7px;
+  background: #2e7d32;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-submit-btn:hover {
+  background: #256b29;
+}
+
+/* CONTACT ADMIN */
+
+.login-help {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+}
+
+.login-help p {
+  margin: 0 0 10px;
+  color: #888;
+  font-size: 12px;
+}
+
+.contact-admin-btn {
+  border: none;
+  background: transparent;
+  color: #2e7d32;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-admin-btn:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .login-page {
+    padding: 15px;
+  }
+
+  .login-card {
+    max-width: 500px;
+    grid-template-columns: 1fr;
+  }
+
+  .login-info {
+    padding: 35px 30px;
+  }
+
+  .login-info > p {
+    margin-bottom: 20px;
+  }
+
+  .login-feature {
+    margin-bottom: 14px;
+  }
+
+  .login-form-section {
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .login-page {
+    padding: 10px;
+  }
+
+  .login-info,
+  .login-form-section {
+    padding: 28px 22px;
+  }
+
+  .login-info h1 {
+    font-size: 27px;
+  }
 }

@@ -9,46 +9,51 @@ function Orders() {
   const orders = [
     {
       id: "ORD1001",
-      customer: "Dharshan",
+      buyer: "AgriConnect Admin",
       product: "Fresh Tomato",
-      quantity: "10 kg",
-      amount: 400,
-      status: "Delivered",
+      quantity: "50 kg",
+      price: 40,
+      amount: 2000,
+      status: "Completed",
       date: "02 Sep 2026",
     },
     {
       id: "ORD1002",
-      customer: "Arun",
+      buyer: "AgriConnect Admin",
       product: "Fresh Carrot",
-      quantity: "5 kg",
-      amount: 250,
+      quantity: "30 kg",
+      price: 50,
+      amount: 1500,
       status: "Pending",
       date: "03 Sep 2026",
     },
     {
       id: "ORD1003",
-      customer: "Priya",
+      buyer: "AgriConnect Admin",
       product: "Fresh Onion",
-      quantity: "8 kg",
-      amount: 320,
-      status: "Out for Delivery",
+      quantity: "40 kg",
+      price: 40,
+      amount: 1600,
+      status: "Confirmed",
       date: "03 Sep 2026",
     },
     {
       id: "ORD1004",
-      customer: "Karthik",
+      buyer: "AgriConnect Admin",
       product: "Fresh Potato",
-      quantity: "15 kg",
-      amount: 450,
-      status: "Delivered",
+      quantity: "60 kg",
+      price: 30,
+      amount: 1800,
+      status: "Collected",
       date: "01 Sep 2026",
     },
     {
       id: "ORD1005",
-      customer: "Meena",
+      buyer: "AgriConnect Admin",
       product: "Fresh Tomato",
-      quantity: "6 kg",
-      amount: 240,
+      quantity: "25 kg",
+      price: 40,
+      amount: 1000,
       status: "Pending",
       date: "03 Sep 2026",
     },
@@ -61,18 +66,14 @@ function Orders() {
 
   return (
     <div className="orders-page">
-
-      {/* Header */}
       <div className="orders-header">
         <div>
           <h1>Orders</h1>
-          <p>View and manage your customer orders.</p>
+          <p>View and manage purchase orders from admin.</p>
         </div>
       </div>
 
-      {/* Summary Cards */}
       <div className="orders-summary">
-
         <div className="order-summary-card">
           <span>Total Orders</span>
           <strong>86</strong>
@@ -84,20 +85,17 @@ function Orders() {
         </div>
 
         <div className="order-summary-card">
-          <span>Out for Delivery</span>
+          <span>Confirmed</span>
           <strong>5</strong>
         </div>
 
         <div className="order-summary-card">
-          <span>Delivered</span>
+          <span>Completed</span>
           <strong>73</strong>
         </div>
-
       </div>
 
-      {/* Filter */}
       <div className="orders-filter">
-
         <label>Filter Orders</label>
 
         <select
@@ -106,29 +104,24 @@ function Orders() {
         >
           <option value="All">All Orders</option>
           <option value="Pending">Pending</option>
-          <option value="Out for Delivery">
-            Out for Delivery
-          </option>
-          <option value="Delivered">Delivered</option>
+          <option value="Confirmed">Confirmed</option>
+          <option value="Collected">Collected</option>
+          <option value="Completed">Completed</option>
         </select>
-
       </div>
 
-      {/* Orders Table */}
       <div className="orders-table-card">
-
         <div className="orders-table-header">
-          <h2>Recent Orders</h2>
+          <h2>Admin Purchase Orders</h2>
           <span>{filteredOrders.length} orders</span>
         </div>
 
         <div className="orders-table-wrapper">
           <table className="orders-table">
-
             <thead>
               <tr>
                 <th>Order ID</th>
-                <th>Customer</th>
+                <th>Buyer</th>
                 <th>Product</th>
                 <th>Quantity</th>
                 <th>Amount</th>
@@ -141,12 +134,11 @@ function Orders() {
             <tbody>
               {filteredOrders.map((order) => (
                 <tr key={order.id}>
-
                   <td>
                     <strong>{order.id}</strong>
                   </td>
 
-                  <td>{order.customer}</td>
+                  <td>{order.buyer}</td>
 
                   <td>{order.product}</td>
 
@@ -176,11 +168,9 @@ function Orders() {
                       View
                     </button>
                   </td>
-
                 </tr>
               ))}
             </tbody>
-
           </table>
         </div>
 
@@ -189,9 +179,7 @@ function Orders() {
             No orders found.
           </div>
         )}
-
       </div>
-
     </div>
   );
 }
