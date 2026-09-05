@@ -1,0 +1,4 @@
+import { Link, useParams } from 'react-router-dom'
+
+function OrderDetails() { const { id } = useParams(); return <div><Link className="back-link" to="/orders">Back to orders</Link><div className="page-heading"><div><p className="eyebrow">Order details</p><h1>{id}</h1><p>Order timeline and fulfilment information.</p></div><span className="status">In transit</span></div><section className="detail-grid"><article className="panel"><h2>Order summary</h2><dl><dt>Farmer</dt><dd>Green Valley Farm</dd><dt>Buyer</dt><dd>FreshMart</dd><dt>Value</dt><dd>₹18,400</dd></dl></article><article className="panel"><h2>Timeline</h2><p className="timeline-item"><strong>Order confirmed</strong><br />Today, 09:30 AM</p><p className="timeline-item"><strong>Pickup scheduled</strong><br />Tomorrow, 07:00 AM</p></article></section></div> }
+export default OrderDetails
